@@ -10,7 +10,11 @@ Este guia fornece instruções passo a passo para clonar um repositório, constr
 https://labs.play-with-docker.com
 ```
 
-### Passo 2: Criar Hosts
+### Passo 2:
+
+Clicar no botão START e após inserir credenciais.
+
+### Passo 3: Criar Hosts
 
 Criar a quantidade de hosts desejados clicando no botão ADD NEW INSTANCE. 
 

@@ -20,19 +20,31 @@ Criar a quantidade de hosts desejados clicando no botão ADD NEW INSTANCE.
 
 ## Configuração no Node Manager
 
-### Passo 3: Inicializar o Docker Swarm
+### Passo 4: Clonar o Repositório
+
+```sh
+git clone https://github.com/victorvmalves/sd-deploy-cluster-swarm.git
+```
+
+### Passo 5: Navegar até a Pasta do Projeto
+
+```sh
+cd sd-deploy-cluster-swarm
+```
+
+### Passo 6: Inicializar o Docker Swarm
 
 ```sh
 docker swarm init --advertise-addr $(hostname -i)
 ```
 
-### Passo 4: Deploy da Stack
+### Passo 7: Deploy da Stack
 
 ```sh
 docker stack deploy --compose-file docker-compose.yml testeapi
 ```
 
-### Passo 5: Verificar os Serviços
+### Passo 8: Verificar os Serviços
 
 ```sh
 docker stack services testeapi
@@ -40,25 +52,25 @@ docker stack services testeapi
 
 ## Configuração nos Nodes Workers
 
-### Passo 6: Clonar o Repositório
+### Passo 9: Clonar o Repositório
 
 ```sh
 git clone https://github.com/victorvmalves/sd-deploy-cluster-swarm.git
 ```
 
-### Passo 7: Navegar até a Pasta do Projeto
+### Passo 10: Navegar até a Pasta do Projeto
 
 ```sh
 cd sd-deploy-cluster-swarm
 ```
 
-### Passo 8: Construir a Imagem Docker
+### Passo 11: Construir a Imagem Docker
 
 ```sh
 docker build -t api .
 ```
 
-### Passo 9: Ingressar no Swarm
+### Passo 12: Ingressar no Swarm
 
 Utilize o token fornecido pelo comando docker swarm init do Manager. Execute o comando abaixo, substituindo TOKEN-INFORMADO-NO-MASTER pelo token real e IP-DO-MANAGER pelo endereço IP do Manager:
 

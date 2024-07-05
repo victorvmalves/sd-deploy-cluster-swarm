@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: api
+    deploy:
+      mode: replicated
+      replicas: 5
+      placement:
+        constraints: [node.role == worker]
+
+  nginx: 
+    image: nginx
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+    depends_on:
+      - api
+    ports:
+      - 3000:3000
+    deploy:
+      placement:
+        constraints: [node.role==manager]
+
+  visualizer:
+    image: dockersamples/visualizer
+    ports:
+      - "8888:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints: [node.role==manager]
+        

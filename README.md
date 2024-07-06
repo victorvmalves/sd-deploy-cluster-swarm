@@ -1,10 +1,10 @@
-# Instruções para Configuração e Deploy de Aplicação com Docker Swarm no Docker Labs
+# Instruções para Configuração e Deploy de Aplicação com Docker Swarm no 'Play with Docker'
 
-Este guia fornece instruções passo a passo para clonar um repositório, construir a imagem Docker e fazer o deploy da aplicação utilizando Docker Swarm no Docker Labs.
+Este guia fornece instruções passo a passo para clonar um repositório, construir a imagem Docker e fazer o deploy da aplicação utilizando Docker Swarm no 'Play with Docker'.
 
 ## Acesso ao Docker Labs e criação dos Hosts
 
-### Passo 1: Abrir Docker Labs
+### Passo 1: Abrir 'Play with Docker'
 
 ```sh
 https://labs.play-with-docker.com
@@ -86,7 +86,7 @@ Seguindo os passos acima, você terá configurado o Docker Swarm com um node Man
 Ajustes para o Docker Labs
 
 - No passo 4, utilize `$(hostname -i)` para obter o endereço IP da máquina no Docker Labs, que pode ser diferente em cada ambiente.
-- No passo 10, adicione a instrução para substituir o `IP-DO-MANAGER` pelo endereço IP do Manager, o que é importante em um ambiente de Docker Labs onde os endereços IP podem variar.
+- No passo 10, adicione a instrução para substituir o `IP-DO-MANAGER` pelo endereço IP do Manager, o que é importante em um ambiente do 'Play with Docker' onde os endereços IP podem variar.
 
-Este guia deve ser adequado para uso no Docker Labs, considerando que o ambiente pode ter algumas particularidades em relação a IPs e configurações de rede.
+Este guia deve ser adequado para uso no 'Play with Docker', considerando que o ambiente pode ter algumas particularidades em relação a IPs e configurações de rede.
 ```

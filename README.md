@@ -2,7 +2,7 @@
 
 Este guia fornece instruções passo a passo para clonar um repositório, construir a imagem Docker e fazer o deploy da aplicação utilizando Docker Swarm no 'Play with Docker'.
 
-## Acesso ao Docker Labs e criação dos Hosts
+## Acesso ao 'Play with Docker' e criação dos Hosts
 
 ### Passo 1: Abrir 'Play with Docker'
 
